@@ -8,12 +8,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-//el html a continuacion es JSX, javascript con html
-// y es gracias a la importacion de React
-// const element = <h1>Hello, Platzi Badges!</h1>;
-const name = 'Sebastián'
-const element = React.createElement('a',{ href:'https://sebastiancordoba.co/'},`Ir a ${name}`);
 
+const name = 'Sebastián'
+// const element = React.createElement('a',{ href:'https://sebastiancordoba.co/'},`Ir a ${name}`);
+//vs
+// const element =  <h1>Hola, soy {name}</h1>
+const element = (
+    <div>
+        <h1>Hola soy {name} 
+            <p>Soy ingeniero front-end</p>
+        </h1>
+    </div>
+);
 const container = document.getElementById('app');
 
 // ReactDOM.render(__qué__, __dónde__);
