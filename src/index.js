@@ -9,7 +9,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './global.css';
-import Badge from './components/Badge';
+//import Badge from './components/Badge';
+import BadgeNew from './pages/BadgeNew';
 
 
 const container = document.getElementById('app');
@@ -19,9 +20,4 @@ const container = document.getElementById('app');
 
 //props son argumentos a una función
 //para este caso van a ser los atributos de nuestro componente
-ReactDOM.render(< Badge
-     firstName="Sebastián"
-     lastName="Córdoba"
-     jobTitle="Frontend Engineer"
-     github="cbascordoba"/>,
-      container);
+ReactDOM.render(<BadgeNew />, container);
