@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './global.css';
 //import Badge from './components/Badge';
 import BadgeNew from './pages/BadgeNew';
+import Badges from './pages/Badges';
 
 
 const container = document.getElementById('app');
@@ -20,4 +21,4 @@ const container = document.getElementById('app');
 
 //props son argumentos a una función
 //para este caso van a ser los atributos de nuestro componente
-ReactDOM.render(<BadgeNew />, container);
+ReactDOM.render(<Badges />, container);
