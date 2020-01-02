@@ -12,6 +12,7 @@ import './global.css';
 //import Badge from './components/Badge';
 import BadgeNew from './pages/BadgeNew';
 import Badges from './pages/Badges';
+import App from './components/App';
 
 
 const container = document.getElementById('app');
@@ -21,4 +22,4 @@ const container = document.getElementById('app');
 
 //props son argumentos a una función
 //para este caso van a ser los atributos de nuestro componente
-ReactDOM.render(<Badges />, container);
+ReactDOM.render(<App />, container);
