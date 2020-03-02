@@ -464,6 +464,14 @@
       "github": "lui",
       "email": "admin@admin.com",
       "id": "H-WqkuH"
+    },
+    {
+      "firstName": "snoopy",
+      "lastName": "Córdoba Omen",
+      "jobTitle": "frontend",
+      "github": "snoopomen",
+      "email": "admin@localhost.com",
+      "id": "l1HJMZs"
     }
   ]
 }

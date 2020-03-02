@@ -36,12 +36,14 @@ class BadgeNew extends React.Component {
 
     handleSubmit = async e => {
         e.preventDefault()
-        this.setState({ loading:true,error:null})
+        this.setState({ loading:true, error:null});
         try {
             await api.badges.create(this.state.form);
-            this.setState({ loading:false})
+            this.setState({ loading:false});
+            this.props.history.push('/badges');
+
         } catch (error) {
-            this.setState({ loading:false,error:error})
+            this.setState({ loading:false, error:error});
         }
     }
 
@@ -69,7 +71,8 @@ class BadgeNew extends React.Component {
                         <BadgeForm 
                         onChange={this.handleChange} 
                         onSubmit={this.handleSubmit}
-                        formValues={this.state.form} />
+                        formValues={this.state.form}
+                        error={this.state.error} />
                      </div>
                  </div>
              </div>
