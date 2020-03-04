@@ -9,6 +9,7 @@ import PageLoading from '../components/PageLoading'
 import PageError from '../components/PageError'
 
 import api from '../api'
+import MiniLoader from '../components/MiniLoader'
 
 class Badges extends React.Component {
 
@@ -27,7 +28,8 @@ class Badges extends React.Component {
       }
 //en este metodo inicializamos la data llamado a una función
       componentDidMount(){
-       this.fetchData()
+       this.fetchData();
+      this.intervalId = setInterval(this.fetchData,5000);
       }
 
       fetchData = async() => {
@@ -60,11 +62,12 @@ class Badges extends React.Component {
 
       componentWillUnmount(){
           console.log('6. componentWillUnMount');
+          clearInterval(this.intervalId);
       }
 
     render(){
         console.log('2. render()');
-        if(this.state.loading=== true){
+        if(this.state.loading=== true && !this.state.data ){
             return <PageLoading/>;
         }
 
@@ -93,8 +96,8 @@ class Badges extends React.Component {
                 
                          </div>
                      </div>
+                 {this.state.loading && <MiniLoader /> }
                 </div>
-                 
             </React.Fragment>
         );
     }
